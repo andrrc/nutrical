@@ -1,3 +1,4 @@
+
 import "@/app/css/header.css";
 export default function Header(){
     return(
@@ -8,7 +9,6 @@ export default function Header(){
                     <li>IA</li>
                     <li>Dietas</li>
                     <li>Login</li>
-                    <li>Register</li>
                 </ul>
             </nav>
         </header>

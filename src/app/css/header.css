@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Raleway-Thin';
+    src: url(../fonts/Raleway/Raleway-Thin.ttf);
+}
+@font-face {
+    font-family: 'Raleway-Bold';
+    src: url(../fonts/Raleway/Raleway-Bold.ttf);
+}
+@font-face {
+    font-family: 'Raleway-Medium';
+    src: url(../fonts/Raleway/Raleway-Medium.ttf);
+}
 body{
     padding: 0;
     margin: 0;
@@ -5,7 +17,7 @@ body{
 }
 header{
     width: 100vw;
-    height: 7rem;
+    height: 5rem;
     background-color: navy;
     color: white;
 }
@@ -15,6 +27,13 @@ nav{
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+h1{
+    font-family: 'Raleway-Bold';
+    
+}
+li{
+    font-family: 'Raleway-Medium';
 }
 ul{
     display: flex;

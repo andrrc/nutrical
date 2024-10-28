@@ -1,7 +1,7 @@
 import React from "react"
 import { UserRegister } from '@/types/users'
 import { useForm } from "react-hook-form";
-import "../formRegister/formRegister.css"
+import "../formRegister/style.css"
 
 export default function FormRegistro() {
 

@@ -1,15 +1,22 @@
+import Link from "next/link";
+import "@/components/header/header.css";
 
-import "@/app/css/header.css";
-export default function Header(){
-    return(
+export default function Header() {
+    return (
         <header>
             <nav>
-                <h1>Nutrical</h1>
+                <h1>
+                    <Link href="/dashboard">Nutrical</Link>
+                </h1>
                 <ul>
                     <li>IA</li>
                     <li>Dietas</li>
-                    <li>Login</li>
-                    <li><a href="../formRegister.tsx">Register</a></li>
+                    <li>
+                        <Link href="/Cu">Login</Link>
+                    </li>
+                    <li>
+                        <Link href="/Register">Register</Link>
+                    </li>
                 </ul>
             </nav>
         </header>

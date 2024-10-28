@@ -39,8 +39,10 @@ nav {
     align-items: center;
 }
 
-h1 {
+h1 > a{
     font-family: 'Raleway-Bold';
+    color: white;
+    text-decoration: none;
 
 }
 

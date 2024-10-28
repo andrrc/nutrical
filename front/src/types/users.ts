@@ -1,8 +1,8 @@
 export type UserRegister = {
     name: string,
     email: string,
-    senha: string,
+    password: string,
     height: number,
     weight: number,
-    age: number
+    age: string
 };

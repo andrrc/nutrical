@@ -1,4 +1,9 @@
+import React from "react"
+import { UserRegister } from '@/types/users'
+import { useForm } from "react-hook-form";
+
 export default function FormRegistro() {
+
     return (
         <form method="GET" action="">
             <label>Nome:</label>

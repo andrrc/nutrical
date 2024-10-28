@@ -18,16 +18,22 @@ app.post('/users', async (request, reply) => {
     const createUserSchema = z.object({       //criando um schema com um a lib zod, validação runtime.
         name: z.string().min(2),
         email: z.string().email(),
-        password: z.string().min(6)
+        password: z.string().min(6),
+        height: z.number(),
+        weight: z.number(),
+        age: z.number(),
     })
 
-    const { name, email, password } = createUserSchema.parse(request.body) // puxando email, name pelo body do user cadastrado depois da validação.
+    const { name, email, password, height, weight, age } = createUserSchema.parse(request.body) // puxando email, name pelo body do user cadastrado depois da validação.
 
     await prisma.user.create({  //criando uma row na tabela, com os dados cadastrados.
         data: {
             name,
             email,
             password,
+            height,
+            weight,
+            age
         }
     })
 
@@ -35,7 +41,7 @@ app.post('/users', async (request, reply) => {
 })
 
 app.listen({
-        port: process.env.PORT ? Number(process.env.PORT) : 3333
+    port: process.env.PORT ? Number(process.env.PORT) : 3333
 }).then(() => {
     console.log('HTTP server running');
 

@@ -18,9 +18,8 @@ model User {
   name      String
   email     String
   password  String
+  height    Float
+  weight    Float
+  age       Int
   createdAt DateTime @default(now())
-}
-
-model UserCredentials {
-  id String @id @default(cuid())
 }

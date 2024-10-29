@@ -13,7 +13,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f3f4f6;
     margin: 0;
-    overflow: hidden; /* Remove o scroll vertical e horizontal */
+    /* overflow: hidden; Remove o scroll vertical e horizontal */
 }
 input,label{
     font-family: 'Raleway', sans-serif;
@@ -35,9 +35,9 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px); /* Considerando a altura do header */
-    padding-top: 80px; /* Espaço para não sobrepor o header */
-    overflow: auto; /* Permite scroll apenas se for necessário */
+    min-height: 7rem;
+    padding-top: 80px;
+    overflow: auto;
 }
 
 form {

@@ -1,4 +1,4 @@
-import Calculator from "@/components/calcImc/Calculator";
+import Calculator from "@/components/calculator/Calculator";
 import Header from "@/components/header/header";
 
 export default function Home() {

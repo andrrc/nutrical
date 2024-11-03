@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState } from 'react';
-import '@/components/calcImc/style.css';
+import '@/components/calculo/style.css';
 
 const Calculator = () => {
   const [weight, setWeight] = useState('');

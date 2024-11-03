@@ -10,7 +10,7 @@ export default function Header() {
                 </h1>
                 <ul>
                     <li>IA</li>
-                    <li>Dietas</li>
+                    <li><Link href={'/calculo'}>Calculo</Link></li>
                     <li>
                         <Link href="/Cu">Login</Link>
                     </li>

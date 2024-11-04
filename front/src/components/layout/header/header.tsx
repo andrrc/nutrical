@@ -15,7 +15,7 @@ export default function Header() {
                         <Link href="/Cu">Login</Link>
                     </li>
                     <li>
-                        <Link href="/Register">Register</Link>
+                        <Link href="/register">Register</Link>
                     </li>
                 </ul>
             </nav>

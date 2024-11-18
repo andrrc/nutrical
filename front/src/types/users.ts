@@ -6,3 +6,8 @@ export type UserRegister = {
     weight: number,
     age: string
 };
+
+export type UserLogin = {
+    email: string,
+    password: string
+};

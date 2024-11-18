@@ -1,9 +1,7 @@
-/* Estilos gerais */
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
+
 @font-face {
     font-family: 'Raleway';
     src: url(../../fonts/Raleway/Raleway-Regular.ttf) format('truetype');
@@ -11,47 +9,36 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f3f4f6;
+    background: #fff;
     margin: 0;
-    overflow: hidden; /* Remove o scroll vertical e horizontal */
+    overflow: hidden;
 }
+
 input,label{
     font-family: 'Raleway', sans-serif;
 }
-header {
-    background-color: #0033cc;
-    padding: 1rem;
-    color: #ffffff;
-    text-align: center;
-    font-size: 1.2rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
+
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 80px); /* Considerando a altura do header */
-    padding-top: 80px; /* Espaço para não sobrepor o header */
-    overflow: auto; /* Permite scroll apenas se for necessário */
+    min-height: calc(100vh - 80px);
+    padding-top: 80px;
+    overflow: auto;
 }
 
 form {
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 12px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
     max-width: 400px;
     width: 100%;
     border: 1px solid #e0e0e0;
     margin: 1rem;
 }
 
-/* Estilos dos campos e botão */
 label {
     display: block;
     margin-top: 1rem;
@@ -70,13 +57,8 @@ input{
     transition: border-color 0.3s ease;
 }
 
-input:focus{
-    border-color: #4a90e2;
-    outline: none;
-}
-
 input[type="submit"] {
-    background-color: #4a90e2;
+    background: linear-gradient(135deg, #ff512f, #f09819);
     color: #ffffff;
     padding: 0.8rem;
     border: none;
@@ -84,9 +66,10 @@ input[type="submit"] {
     font-size: 1rem;
     margin-top: 1.5rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #357abf;
+    background: linear-gradient(135deg, #1845ad, #23a2f6);
+    transform: translateY(-2px);
 }

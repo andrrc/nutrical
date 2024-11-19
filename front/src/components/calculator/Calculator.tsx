@@ -44,6 +44,7 @@ const Calculator = () => {
             value={weight}
             onChange={(e) => setWeight(e.target.value)}
             className="calculator-input"
+            placeholder="Ex: 70.5"
           />
         </label>
       </div>
@@ -55,6 +56,7 @@ const Calculator = () => {
             value={height}
             onChange={(e) => setHeight(e.target.value)}
             className="calculator-input"
+            placeholder="Ex: 1.75"
           />
         </label>
       </div>

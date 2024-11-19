@@ -11,11 +11,7 @@ body {
     font-family: Arial, sans-serif;
     background: #fff;
     margin: 0;
-<<<<<<< HEAD
     overflow: hidden;
-=======
-    /* overflow: hidden; Remove o scroll vertical e horizontal */
->>>>>>> 29e40b5048629746c252216d841761b447aa542c
 }
 
 input,label{
@@ -27,11 +23,7 @@ input,label{
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
     min-height: calc(100vh - 80px);
-=======
-    min-height: 7rem;
->>>>>>> 29e40b5048629746c252216d841761b447aa542c
     padding-top: 80px;
     overflow: auto;
 }

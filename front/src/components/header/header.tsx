@@ -11,7 +11,7 @@ export default function Header() {
                 </h1>
                 <ul>
                     <li>IA</li>
-                    <li><Link href={"/Dietas"}>Dietas</Link></li>
+                    <li><Link href="/Dietas">Dietas</Link></li>
                     <li>
                         <Link href="/Login">Login</Link>
                     </li>

@@ -1,5 +1,6 @@
+import React from "react";
 import Link from "next/link";
-import "@/components/layout/header/header.css";
+import "@/components/header/style.css";
 
 export default function Header() {
     return (
@@ -10,9 +11,7 @@ export default function Header() {
                 </h1>
                 <ul>
                     <li>IA</li>
-                    <li>
-                        <Link href={"/Dietas"}>Dietas</Link>
-                    </li>
+                    <li><Link href={"/Dietas"}>Dietas</Link></li>
                     <li>
                         <Link href="/Login">Login</Link>
                     </li>

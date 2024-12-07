@@ -18,10 +18,15 @@ interface Food {
 
 export default function Meals() {
   const [foods, setFoods] = useState<Food[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [selectedFood, setSelectedFood] = useState<Food | null>(null);
-    
+  const [searchTerm, setSearchTerm] = useState('');
+  const [filteredFoods, setFilteredFoods] = useState<Food[]>([]);
+
   const fetchFoods = async () => {
     try {
+      setLoading(true);
       const response = await fetch('http://localhost:4000/graphql', {
         method: 'POST',
         headers: {
@@ -44,25 +49,68 @@ export default function Meals() {
           `
         })
       });
+
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+
       const data = await response.json();
+      
+      if (data.errors) {
+        throw new Error(data.errors[0].message);
+      }
+
       return data.data?.getAllFood || [];
     } catch (error) {
       console.error('Error fetching foods:', error);
-      return [];
+      throw error;
     }
   };
 
   useEffect(() => {
-    fetchFoods().then(data => {
-      setFoods(data);
-    });
+    fetchFoods()
+      .then(data => {
+        setFoods(data);
+        setFilteredFoods(data);
+        setError(null);
+      })
+      .catch(err => {
+        setError(err.message);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   }, []);
+
+  useEffect(() => {
+    const filtered = foods.filter(food =>
+      food.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredFoods(filtered);
+  }, [foods, searchTerm]);
+
+  if (loading) {
+    return <div className="container">Loading...</div>;
+  }
+
+  if (error) {
+    return <div className="container">Error: {error}</div>;
+  }
 
   return (
     <div className="container">
-      <h1>Meals</h1>
+      <div className="search-wrapper">
+        <input
+          type="text"
+          placeholder="Search foods..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          className="search-input"
+        />
+      </div>
+      
       <div className="foodGrid">
-        {foods.map((food, index) => (
+        {filteredFoods.map((food, index) => (
           <div 
             key={index}
             className="foodCard"
@@ -101,7 +149,7 @@ export default function Meals() {
             </div>
             <button 
               onClick={() => setSelectedFood(null)}
-              style={{ marginTop: '1rem' }}
+              className="close-button"
             >
               Close
             </button>

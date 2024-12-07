@@ -126,6 +126,12 @@ export default function Meals() {
           className="search-input"
         />
       </div>
+
+      <div className='aviso'>
+          <h1>Todos os macronutrientes são calculados com a base de 100 gramas</h1>
+      </div>
+
+
       
       <div className="foodGrid">
         {filteredFoods.map((food, index) => (
@@ -145,23 +151,23 @@ export default function Meals() {
             <h2>{selectedFood.name}</h2>
             <div className="nutrientsList">
               <div className="nutrientItem">
-                <span>Calories:</span>
+                <span>Calorias:</span>
                 <span>{selectedFood.nutrients.kcal}kcal</span>
               </div>
               <div className="nutrientItem">
-                <span>Carbohydrates:</span>
+                <span>Carboidratos:</span>
                 <span>{selectedFood.nutrients.carbohydrates}g</span>
               </div>
               <div className="nutrientItem">
-                <span>Lipids:</span>
+                <span>Lípidios:</span>
                 <span>{selectedFood.nutrients.lipids}g</span>
               </div>
               <div className="nutrientItem">
-                <span>Sodium:</span>
+                <span>Sódio:</span>
                 <span>{selectedFood.nutrients.sodium}mg</span>
               </div>
               <div className="nutrientItem">
-                <span>Calcium:</span>
+                <span>Cálcio:</span>
                 <span>{selectedFood.nutrients.calcium}mg</span>
               </div>
             </div>

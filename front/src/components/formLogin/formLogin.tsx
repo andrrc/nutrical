@@ -25,7 +25,7 @@ export default function FormLogin() {
                 <input {...register("password")} type="password" placeholder="Ex: ********" />
                 
                 <input type="submit" value="Enviar" />
-                <p>Não tem uma conta? <Link href="/Register">Registre-se</Link></p>
+                <p>Não tem uma conta? <Link href="/register">Registre-se</Link></p>
             </form>
         </div>
     )

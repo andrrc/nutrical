@@ -10,8 +10,8 @@ export default function Header() {
                     <Link href="/dashboard">Nutrical</Link>
                 </h1>
                 <ul>
-                    <li>IA</li>
-                    <li><Link href="/Dietas">Dietas</Link></li>
+                    {/* <li>IA</li> */}
+                    {/* <li><Link href="/Dietas">Dietas</Link></li> */}
                     <li>
                         <Link href="/Login">Login</Link>
                     </li>

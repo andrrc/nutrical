@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'Raleway-Thin';
+  src: url(../../fonts/Raleway/Raleway-Thin.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url(../../fonts/Raleway/Raleway-Bold.ttf);
+}
+
+@font-face {
+  font-family: 'Raleway-Medium';
+  src: url(../../fonts/Raleway/Raleway-Medium.ttf);
+}
+
 .container {
   padding: 180px 20px 20px 20px;
 }
@@ -28,7 +43,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding-inline: 200px;
 }
 
 .foodCard {
@@ -37,6 +52,7 @@
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   cursor: pointer;
+  font-family: 'Raleway-Medium';
   transition: transform 0.2s;
 }
 

@@ -120,7 +120,7 @@ export default function Meals() {
       <div className="search-wrapper">
         <input
           type="text"
-          placeholder="Search foods..."
+          placeholder="Procurar comida..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           className="search-input"

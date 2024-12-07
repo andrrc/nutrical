@@ -1,5 +1,5 @@
 .container {
-  padding: 200px 20px 20px 20px;
+  padding: 180px 20px 20px 20px;
 }
 
 .search-wrapper {
@@ -88,4 +88,31 @@
 
 .close-button:hover {
   background: #3182ce;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.search-skeleton {
+  width: 500px;
+  height: 45px;
+  border-radius: 25px;
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 800px 104px;
+  animation: shimmer 1.5s linear infinite;
+}
+
+.foodCard-skeleton {
+  height: 80px;
+  border-radius: 8px;
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 800px 104px;
+  animation: shimmer 1.5s linear infinite;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }

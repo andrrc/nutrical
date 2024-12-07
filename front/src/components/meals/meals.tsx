@@ -16,6 +16,21 @@ interface Food {
   nutrients: Nutrients;
 }
 
+const LoadingSkeleton = () => {
+  return (
+    <div className="container">
+      <div className="search-wrapper">
+        <div className="search-skeleton"></div>
+      </div>
+      <div className="foodGrid">
+        {[...Array(8)].map((_, index) => (
+          <div key={index} className="foodCard-skeleton"></div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 export default function Meals() {
   const [foods, setFoods] = useState<Food[]>([]);
   const [loading, setLoading] = useState(true);
@@ -27,6 +42,9 @@ export default function Meals() {
   const fetchFoods = async () => {
     try {
       setLoading(true);
+      // Add artificial delay to see loading state
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
       const response = await fetch('http://localhost:4000/graphql', {
         method: 'POST',
         headers: {
@@ -90,7 +108,7 @@ export default function Meals() {
   }, [foods, searchTerm]);
 
   if (loading) {
-    return <div className="container">Loading...</div>;
+    return <LoadingSkeleton />;
   }
 
   if (error) {
